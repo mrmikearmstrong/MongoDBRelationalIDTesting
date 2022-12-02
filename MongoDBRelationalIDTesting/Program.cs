@@ -54,9 +54,13 @@ internal class Program
         // read all the tasks associated with a project
         var filter = Builders<DBPrj>.Filter.Eq("Name", "Project0");
         var project0 = projectsCol.Find(filter).FirstOrDefault();
+        List<ObjectId> ids = project0.associatedTasks;
 
-        // print the collection
-        Console.WriteLine(project0.ToJson().ToString());
+        foreach(ObjectId id in ids) {
+            
+            
+
+        }
 
     }
 }
